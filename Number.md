@@ -61,4 +61,6 @@
 
 `parseFloat`与`parseInt`类似。`parseFloat`第一个有效字符是`数字`或者第`点`或者`正负号`。
 
-没有`.`会解析成解析成整数。`parseFloat(11); // 11` `parseFloat("11."); // 11`
+没有`.`会解析成解析成整数。`parseFloat(11); // 11` `parseFloat("11."); // 11`。
+
+parseFloat会解析科学计数的值。`parseFloat("12e2"); //1200` 

@@ -1,16 +1,16 @@
-#### Number
+## Number
 
-##### 1.isNaN
+### 1.isNaN
 
 对象调用isNaN方法，会先调用对象的valueOf方法，然后确定返回值是否可以转换成数字值，如果不能在基于返回值调用toString()方法，再测试返回值。
 
-##### 2.数值转换
+### 2.数值转换
 
 有3个函数可以把非数值转换成数值：`Number()`、`parseInt()`和`parseFloat()`。
 
 > `Number()`可用于任何数据类型。`parseInt`和`parseFloat`专门用于把字符串转换成数值。
 
-###### `Number()`转型函数的转换规则：
+#### `2.1 Number()`转型函数的转换规则：
 
 - `Boolean`类型：`true`转换成1；`false`转换成0。
 - Number类型：转换前后相同。
@@ -26,7 +26,7 @@
 - `undefined`返回`NaN`。
 - `Object`类型：先调用对象的`valueOf`方法，然后再依照上面规则转换。如果转换结果为`NaN`，则再调用`toString()`方法，然后再按照上面String类型转换规则转换。
 
-###### `parseInt(string[,radix])`解析字符串，以指定基数解析返回十进制整数。radix 2-36之间的整数。第一个参数如果不是字符串会自动转换成字符串
+#### `2.2 parseInt(string[,radix])`解析字符串，以指定基数解析返回十进制整数。radix 2-36之间的整数。第一个参数如果不是字符串会自动转换成字符串
 
 参数radix省略:
 
@@ -57,7 +57,7 @@
 
 > 注：为了兼容性，最好全部指定radix参数。
 
-###### `parseFloat(string)`
+#### `2.3 parseFloat(string)`
 
 `parseFloat`与`parseInt`类似。`parseFloat`第一个有效字符是`数字`或者第`点`或者`正负号`。
 

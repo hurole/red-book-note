@@ -64,3 +64,51 @@
 没有`.`会解析成解析成整数。`parseFloat(11); // 11` `parseFloat("11."); // 11`。
 
 parseFloat会解析科学计数的值。`parseFloat("12e2"); //1200` 
+
+#### String
+
+###### toString([radix])方法，返回相应值的字符串表现
+
+- null和undefined没有toString方法。
+
+- 如果调用toString是数值，可以指定一个参数，以指定进制的形式返回字符串。
+
+```javascript
+var a = 10;
+a.toString(2); // "1010"
+a.toString(8); // "12"
+a.toString(16); // "a" 
+```
+
+###### String()转换函数
+
+转换规则：
+
+- 如果有toString方法直接调用进行转换。
+- null转换成“null”
+- undefined转换成“undefined”
+
+> 要将某个值转换为字符串，可以直接使用加号操作符。+""对应值加空串
+
+#### Object
+
+创建对象：
+
+- 字面量方式
+- new Object() ,没有参数可以省略括号，（new Object;） 但是不推荐。
+- Objectl类型是所有实例的基础，Object实例具有一下属性方法：
+  - constructor构造函数。
+  - hasOwnProperty(propertyName)判断实例本身是含有某个属性。
+  - propertyIsEnumerable(propertyName)判断属性是否可枚举。
+  - isPrototypeOf(obj)判断传入对象是否是实例的原型。
+  - toLocaleString
+  - toString
+  - valueOf
+
+###### 递增递减
+
+前置会等表达式求值之前递增递减。后置会在表达式求值之后递增递减。
+
+对于任何类型的值都可以进行递增或递减操作，
+
+递增递减前，会将值转换成number同转换函数Number()。
